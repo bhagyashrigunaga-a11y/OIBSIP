@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #243447;
+    background: #f5f1e8;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 25px;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 25px;
+
+    background: #183b56;
+    color: white;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.subtitle,
+.section-label {
+    color: #d49a3a;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-family: "Libre Baskerville", serif;
+    font-size: clamp(38px, 6vw, 70px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 19px;
+    color: #dbe7ef;
+}
+
+
+/* ABOUT */
+
+.about-section {
+    padding: 80px 0;
+    background: #f5f1e8;
+}
+
+.about-section .container {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 350px;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 8px solid white;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.image-container p {
+    margin-top: 12px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.biography h2,
+.legacy-section h2,
+.section-heading h2 {
+    font-family: "Libre Baskerville", serif;
+    font-size: 38px;
+    color: #183b56;
+    margin-bottom: 25px;
+}
+
+.biography p:not(.section-label) {
+    color: #526273;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+
+/* TIMELINE */
+
+.timeline-section {
+    padding: 80px 0;
+    background: #e8eef2;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.timeline-card {
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    border-top: 4px solid #d49a3a;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+    transition: 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-card span {
+    color: #d49a3a;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.timeline-card h3 {
+    font-family: "Libre Baskerville", serif;
+    color: #183b56;
+    margin: 8px 0 10px;
+    font-size: 20px;
+}
+
+.timeline-card p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* QUOTE */
+
+.quote-section {
+    padding: 90px 25px;
+    background: #183b56;
+    color: white;
+    text-align: center;
+}
+
+.quote-container {
+    max-width: 850px;
+    margin: auto;
+}
+
+.quote-mark {
+    font-family: "Libre Baskerville", serif;
+    font-size: 70px;
+    color: #d49a3a;
+    line-height: 0.7;
+}
+
+blockquote {
+    font-family: "Libre Baskerville", serif;
+    font-size: clamp(24px, 4vw, 38px);
+    line-height: 1.5;
+    margin: 25px 0;
+}
+
+.quote-author {
+    color: #dbe7ef;
+    font-size: 15px;
+}
+
+
+/* LEGACY */
+
+.legacy-section {
+    padding: 80px 0;
+    background: #f5f1e8;
+    text-align: center;
+}
+
+.legacy-section .container {
+    max-width: 850px;
+}
+
+.legacy-section h2 {
+    margin-bottom: 25px;
+}
+
+.legacy-section p:not(.section-label) {
+    color: #526273;
+    margin-bottom: 18px;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #102a3c;
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+footer p:first-child {
+    margin-bottom: 5px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .about-section .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .image-container img {
+        max-width: 300px;
+        height: 370px;
+    }
+
+    .timeline {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .biography h2,
+    .legacy-section h2,
+    .section-heading h2 {
+        font-size: 32px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 60vh;
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .tagline {
+        font-size: 16px;
+    }
+
+    .about-section,
+    .timeline-section,
+    .legacy-section {
+        padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .image-container img {
+        max-width: 260px;
+        height: 330px;
+    }
+
+    .biography h2,
+    .legacy-section h2,
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    blockquote {
+        font-size: 23px;
+    }
+}
