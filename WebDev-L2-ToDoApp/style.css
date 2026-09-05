@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #eef2ff;
+    color: #1e293b;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(30, 41, 59, 0.12);
+}
+
+
+/* HEADER */
+
+.app-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.app-header p {
+    color: #4f46e5;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.app-header h1 {
+    font-size: 42px;
+    color: #172554;
+    margin-bottom: 8px;
+}
+
+.app-header span {
+    color: #64748b;
+    font-size: 15px;
+}
+
+
+/* INPUT */
+
+.task-input {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.task-input input {
+    flex: 1;
+    padding: 15px 17px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    outline: none;
+    font-size: 15px;
+    color: #1e293b;
+}
+
+.task-input input:focus {
+    border-color: #4f46e5;
+}
+
+.task-input button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 9px;
+    background: #4f46e5;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.task-input button:hover {
+    background: #4338ca;
+    transform: translateY(-2px);
+}
+
+
+/* ERROR */
+
+.error-message {
+    min-height: 24px;
+    color: #dc2626;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+
+/* TASK SECTIONS */
+
+.task-section {
+    margin-top: 30px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.section-header h2 {
+    font-size: 21px;
+    color: #172554;
+}
+
+.section-header span {
+    color: #4f46e5;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* TASK LIST */
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 17px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.task-info {
+    flex: 1;
+}
+
+.task-text {
+    color: #1e293b;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.task-time {
+    display: block;
+    margin-top: 4px;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+
+/* BUTTONS */
+
+.task-actions {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+}
+
+.task-actions button {
+    border: none;
+    border-radius: 7px;
+    padding: 8px 11px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.complete-btn {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.edit-btn {
+    background: #e0e7ff;
+    color: #4338ca;
+}
+
+.delete-btn {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.task-actions button:hover {
+    opacity: 0.8;
+}
+
+
+/* COMPLETED */
+
+.completed .task-text {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+
+/* EMPTY MESSAGE */
+
+.empty-message {
+    padding: 25px;
+    text-align: center;
+    color: #94a3b8;
+    background: #f8fafc;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .todo-app {
+        padding: 25px 18px;
+    }
+
+    .app-header h1 {
+        font-size: 34px;
+    }
+
+    .task-input {
+        flex-direction: column;
+    }
+
+    .task-input button {
+        width: 100%;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .task-actions {
+        justify-content: flex-start;
+    }
+
+    .section-header h2 {
+        font-size: 18px;
+    }
+}
