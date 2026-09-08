@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Authentication System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <div class="dashboard-card">
+
+            <h1>Welcome to Dashboard</h1>
+
+            <p class="welcome-text">
+                You have successfully logged in.
+            </p>
+
+            <div class="user-info">
+                <p>Logged in as:</p>
+                <h2 id="loggedInUser"></h2>
+            </div>
+
+            <p class="protected-message">
+                This is a protected page. You can access this page only
+                after successful authentication.
+            </p>
+
+            <button id="logoutBtn" class="logout-btn">
+                Logout
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
